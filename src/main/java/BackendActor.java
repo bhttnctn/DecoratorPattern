@@ -26,10 +26,10 @@ public class BackendActor extends BaseActor {
 	public void methodAfter(Object result) {
 		if (result instanceof SessionFactory.Return) {
 			SessionFactory.Return sessionFactory = (SessionFactory.Return) result;
-			System.out.println("SessionFactory return: " + sessionFactory.address);
+			System.out.println("SessionFactory return: " + sessionFactory.message);
 		} else if (result instanceof AccessFactory.Return) {
 			AccessFactory.Return accessFactory = (AccessFactory.Return) result;
-			System.out.println("AccessFactory return: " + accessFactory.model);
+			System.out.println("AccessFactory return: " + accessFactory.message);
 		}
 	}
 }
